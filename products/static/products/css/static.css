@@ -17,7 +17,7 @@ body {
     justify-content: center; /* Выравнивание по центру */
     align-items: center; /* Центрирование элементов по вертикали */
     font-size: 20px; /* Увеличенный размер текста */
-    height: 90px; /* Высота меню */
+    height: 60px; /* Высота меню */
     z-index: 1000; /* Убедитесь, что меню остается поверх других элементов */
 }
 
@@ -108,3 +108,64 @@ body {
 }
 
 
+
+
+
+/* Глобальные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Контейнер для списка товаров */
+.products-container {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Стилизация карточки товара */
+.product {
+    width: 200px; /* Ширина карточки */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+    transition: transform .3s ease-in-out;
+}
+
+/* Стилизация названия товара */
+.product-title {
+    font-size: 16px;
+    padding: 8px;
+    color: #333;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Стилизация изображения товара */
+.product img {
+    width: 100%; /* Заполняет ширину карточки */
+    display: block;
+}
+
+/* Стилизация текста описания товара */
+.product-text {
+    font-size: 14px;
+    padding: 8px;
+}
+
+/* Эффект при наведении */
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
