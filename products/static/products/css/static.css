@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/* стиль под меню */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    position: fixed; /* Фиксированное позиционирование меню */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex; /* Используем flexbox для выравнивания пунктов меню */
+    justify-content: center; /* Выравнивание по центру */
+    align-items: center; /* Центрирование элементов по вертикали */
+    font-size: 20px; /* Увеличенный размер текста */
+    height: 90px; /* Высота меню */
+    z-index: 1000; /* Убедитесь, что меню остается поверх других элементов */
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.5s, box-shadow 0.5s; /* Плавный переход */
+    border-radius: 5px; /* Скругление углов подсветки по умолчанию */
+}
+
+.menu li a:hover {
+    background-color: red; /* Красная подсветка при наведении */
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.6); /* Тень для эффекта глубины */
+}
+
+/* Адаптивность: изменения стилей для маленьких экранов */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column; /* Ссылки выстраиваются вертикально */
+        height: auto; /* Высота меню теперь зависит от количества пунктов */
+    }
+
+    .menu li {
+        width: 100%; /* Каждый пункт меню занимает всю ширину */
+    }
+
+    .menu li a {
+        padding: 20px; /* Больше места для пунктов меню */
+        text-align: center; /* Центрирование текста ссылки */
+    }
+}
+
+
+
+
+/* Стили для футера */
+.footer {
+    background-color: black; /* Черный фон подвала */
+    color: white; /* Красный цвет текста */
+    position: fixed; /* Фиксированное позиционирование на дне страницы */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center; /* Центрирование текста */
+    padding: 35px 0; /* Увеличенный отступ сверху и снизу для более высокого подвала */
+    font-size: 16px; /* Размер шрифта */
+    z-index: 1000; /* Убедитесь, что футер будет поверх всех остальных элементов страницы */
+}
+
+.container {
+    display: flex; /* Использование flexbox для размещения элементов */
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    flex-wrap: wrap; /* Перенос элементов на новую строку, если не хватает места */
+}
+
+.footer-text, .footer a {
+    margin: 0 10px; /* Отступы вокруг текста и иконок */
+    display: flex; /* Для выравнивания текста и иконок в одной линии */
+    align-items: center; /* Выравнивание по вертикали */
+    color: white; /* Белый цвет текста и ссылок */
+}
+
+.footer a:hover {
+    color: white; /* Белый цвет при наведении */
+}
+
+.fa {
+    margin-right: 5px; /* Отступ справа от иконки */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .footer {
+        padding: 30px 0; /* Увеличенный отступ для более высокого подвала на устройствах с маленьким экраном */
+        font-size: 14px; /* Немного уменьшаем размер шрифта на маленьких экранах */
+    }
+    .container {
+        flex-direction: column; /* Вертикальное выравнивание элементов подвала */
+    }
+}
+
+

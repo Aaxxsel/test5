@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Title }}</title>
+    
+<link type="text/css" href="{% static 'products/css/static.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+    
+</head>
+<body>
+
+<ul class="menu">
+    <li><a href={% url 'index' %}>Главная</a></li>
+    <li><a href={% url 'categories' %}>Товары</a></li>
+    <li><a href="#news">Новости</a></li>
+    <li><a href="#sets">Сеты</a></li>
+    <li><a href="#contacts">Контакты</a></li>
+    <li><a href="#how-to-order">Как заказать</a></li>
+</ul>
+
+<footer class="footer">
+    <div class="container">
+        <span class="footer-text">Телефон: <i class="fa fa-phone"></i> +7 (000) 00-00-00</span>
+        <a href="https://t.me/yourusername" class="footer-text"><i class="fa fa-telegram"></i> Телеграм</a>
+        <a href="https://wa.me/yourphonenumber" class="footer-text"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+    </div>
+</footer>
+
+{% block content %} {% endblock %}
+</body>
+</html>
